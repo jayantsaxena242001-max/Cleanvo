@@ -116,6 +116,65 @@
             background-color: #218838;
         }
 
+        /* ABOUT, MISSION & VISION SECTION */
+        .about-section {
+            padding: 60px 10%;
+            background-color: var(--bg-light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .about-story h3 {
+            color: var(--primary-blue);
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .about-story p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .mv-cards-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mv-card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border-left: 5px solid var(--primary-blue);
+        }
+
+        .mv-card.vision {
+            border-left: 5px solid var(--accent-green);
+        }
+
+        .mv-card h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .mv-card p {
+            font-size: 15px;
+            color: #555;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
         /* PRODUCTS SECTION */
         .section-title {
             text-align: center;
@@ -154,6 +213,13 @@
             gap: 50px;
             padding: 50px 10%;
             background-color: #ffffff;
+        }
+
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -264,7 +330,6 @@
     <!-- NAVIGATION HEADER -->
     <header>
         <div class="logo-area">
-            <!-- Replace 'logo.png' with your image file path once uploaded to GitHub -->
             <img class="logo-img" src="logo.png" alt="Cleanvo Logo">
             <div class="logo-text">
                 <h1>Cleanvo</h1>
@@ -273,6 +338,7 @@
         </div>
         <nav>
             <a href="#home" class="active">Home</a>
+            <a href="#about">About Us</a>
             <a href="#products">Products</a>
             <a href="#contact">Contact Us</a>
         </nav>
@@ -283,6 +349,37 @@
         <h2>Your Everyday Hygiene Partner</h2>
         <p>Essential Cleaning Products Crafted for Every Household.</p>
         <a href="#products" class="cta-btn">Our Products</a>
+    </section>
+
+    <!-- ABOUT, MISSION & VISION SECTION -->
+    <section class="about-section" id="about">
+        <div class="about-grid">
+            
+            <!-- LEFT COLUMN: ABOUT ME TEXT -->
+            <div class="about-story">
+                <h3>About Cleanvo</h3>
+                <p>At Cleanvo Essentials, we believe that a clean home is the foundation of a happy, healthy, and peaceful life. Our journey began with a simple but powerful realization: keeping your home spotless shouldn’t require harsh, toxic chemicals that worry you, nor should premium, highly effective hygiene products be out of reach.</p>
+                <p>Born in the heart of Shahjahanpur, Uttar Pradesh, Cleanvo was founded to bridge this gap. We set out to create a line of home cleaning essentials that deliver commercial-grade, uncompromising strength while remaining completely safe for everyday family life.</p>
+            </div>
+
+            <!-- RIGHT COLUMN: MISSION & VISION CARDS -->
+            <div class="mv-cards-wrapper">
+                
+                <!-- MISSION CARD -->
+                <div class="mv-card">
+                    <h4>🎯 Our Mission</h4>
+                    <p>"To replace household germs with absolute peace of mind through safe, powerful, and honest cleaning essentials."</p>
+                </div>
+
+                <!-- VISION CARD -->
+                <div class="mv-card vision">
+                    <h4>👁️ Our Vision</h4>
+                    <p>"To make healthy, toxic-conscious living the effortless choice for every home, everyday."</p>
+                </div>
+
+            </div>
+
+        </div>
     </section>
 
     <!-- PRODUCTS GRID -->
