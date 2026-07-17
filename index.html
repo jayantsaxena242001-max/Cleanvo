@@ -31,7 +31,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 10%;
+            padding: 15px 10%;
             background: #fff;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             position: sticky;
@@ -39,19 +39,32 @@
             z-index: 100;
         }
 
-        .logo-area h1 {
-            color: var(--primary-blue);
-            font-size: 28px;
-            font-weight: 700;
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        .logo-area span {
+        .logo-img {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-text h1 {
+            color: var(--primary-blue);
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .logo-text span {
             color: var(--accent-green);
-            font-size: 12px;
+            font-size: 11px;
             display: block;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-top: -5px;
+            margin-top: 2px;
         }
 
         nav a {
@@ -134,7 +147,7 @@
             font-size: 22px;
         }
 
-        /* LIZOL-INSPIRED ASYMMETRIC CONTACT SECTION */
+        /* CONTACT SECTION */
         .contact-container {
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
@@ -147,9 +160,15 @@
             .contact-container {
                 grid-template-columns: 1fr;
             }
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
         }
 
-        /* LEFT SIDE: FORM */
         .contact-form-wrapper {
             background: var(--bg-light);
             padding: 40px;
@@ -204,7 +223,6 @@
             background-color: #004085;
         }
 
-        /* RIGHT SIDE: COMPANY INFO */
         .contact-info-wrapper {
             padding: 20px 0;
         }
@@ -231,7 +249,6 @@
             color: #444;
         }
 
-        /* FOOTER */
         footer {
             background-color: #222;
             color: #fff;
@@ -247,8 +264,12 @@
     <!-- NAVIGATION HEADER -->
     <header>
         <div class="logo-area">
-            <h1>Cleanvo</h1>
-            <span>Home Cleaning Essential</span>
+            <!-- Replace 'logo.png' with your image file path once uploaded to GitHub -->
+            <img class="logo-img" src="logo.png" alt="Cleanvo Logo">
+            <div class="logo-text">
+                <h1>Cleanvo</h1>
+                <span>Home Cleaning Essential</span>
+            </div>
         </div>
         <nav>
             <a href="#home" class="active">Home</a>
@@ -257,10 +278,10 @@
         </nav>
     </header>
 
-    <!-- HERO HERO BANNER -->
+    <!-- HERO BANNER -->
     <section class="hero" id="home">
         <h2>Your Everyday Hygiene Partner</h2>
-        <p>Essential Cleaning Products Crafted for Every Shahjahanpur Household.</p>
+        <p>Essential Cleaning Products Crafted for Every Household.</p>
         <a href="#products" class="cta-btn">Our Products</a>
     </section>
 
@@ -281,7 +302,7 @@
         </div>
     </section>
 
-    <!-- LIZOL METHOD LAYOUT CONTACT PAGE -->
+    <!-- CONTACT PAGE -->
     <h2 class="section-title" id="contact">Contact Cleanvo Team</h2>
     <section class="contact-container">
         
