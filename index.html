@@ -79,41 +79,71 @@
             color: var(--primary-blue);
         }
 
-        /* HERO BANNER */
+        /* NEW & ENHANCED HERO BANNER */
         .hero {
-            background: linear-gradient(135deg, #e6f0fa 0%, #f4f9f4 100%);
-            padding: 80px 10%;
+            background-color: #f3f8fc;
+            /* Premium geometric/water ripple effect pattern */
+            background-image: radial-gradient(var(--primary-blue) 0.5px, transparent 0.5px), radial-gradient(var(--accent-green) 0.5px, #f3f8fc 0.5px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            opacity: 0.95;
+            padding: 110px 10%; /* Increased padding for an expansive, luxury feel */
             text-align: center;
             border-bottom: 5px solid var(--primary-blue);
+            position: relative;
+        }
+
+        /* Overlay to keep the pattern soft and readable */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(230, 240, 250, 0.85) 0%, rgba(244, 249, 244, 0.85) 100%);
+            z-index: 1;
+        }
+
+        /* Bring content above overlay */
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
 
         .hero h2 {
-            font-size: 42px;
+            font-size: 48px;
+            font-weight: 800;
             color: var(--primary-blue);
-            margin-bottom: 15px;
+            margin-bottom: 18px;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
 
         .hero p {
-            font-size: 18px;
-            margin-bottom: 25px;
-            color: #555;
+            font-size: 20px;
+            margin-bottom: 35px;
+            color: #4a5568;
+            font-weight: 500;
+            letter-spacing: 0.3px;
         }
 
         .cta-btn {
             background-color: var(--accent-green);
             color: white;
-            padding: 12px 30px;
+            padding: 14px 40px;
             border: none;
-            border-radius: 25px;
+            border-radius: 30px;
             font-size: 16px;
-            font-weight: bold;
+            font-weight: 700;
             cursor: pointer;
             text-decoration: none;
-            transition: background 0.3s;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: inline-block;
         }
 
         .cta-btn:hover {
             background-color: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
         }
 
         /* ABOUT, MISSION & VISION SECTION */
@@ -226,6 +256,9 @@
             .contact-container {
                 grid-template-columns: 1fr;
             }
+            .hero h2 {
+                font-size: 34px;
+            }
             header {
                 flex-direction: column;
                 gap: 15px;
@@ -330,7 +363,7 @@
     <!-- NAVIGATION HEADER -->
     <header>
         <div class="logo-area">
-            <img class="logo-img" src="logo.jpeg" alt="Cleanvo Logo">
+            <img class="logo-img" src="logo.png" alt="Cleanvo Logo">
             <div class="logo-text">
                 <h1>Cleanvo</h1>
                 <span>Home Cleaning Essential</span>
@@ -344,11 +377,13 @@
         </nav>
     </header>
 
-    <!-- HERO BANNER -->
+    <!-- NEW STRUCTURAL HERO BANNER -->
     <section class="hero" id="home">
-        <h2>Your Everyday Hygiene Partner</h2>
-        <p>Essential Cleaning Products Crafted for Every Household.</p>
-        <a href="#products" class="cta-btn">Our Products</a>
+        <div class="hero-content">
+            <h2>Your Everyday Hygiene Partner</h2>
+            <p>Essential Cleaning Products Crafted for Every Household.</p>
+            <a href="#products" class="cta-btn">Our Products</a>
+        </div>
     </section>
 
     <!-- ABOUT, MISSION & VISION SECTION -->
